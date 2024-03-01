@@ -1,0 +1,103 @@
+Git fetch, pull and clone
+=========================
+
+GIT COMMAND 
+
+  git fetch --> It brings changes in the code to the LocalRepo
+  git pull --> It brings changes in the code to the localRepoand Working area 
+  git clone --> It brings the entire code to the working area 
+
+   From LocalRepo to RemoteRepo  = git push 
+   From RemoteRepo to LocalRepo  = git fetch or git pull    
+
+GIT FETCH:
+
+Inside Github repo
+create a deploy.sh file and add some lines of code
+
+In Terminal:
+
+git fetch aliasname main
+ls : you wont see deploy.sh
+git merge aliasname/main
+ls : you will see deploy.sh
+
+
+Inside Github:
+
+create comment.sh and add a line of code to the file and commit
+
+In Terminal:
+
+git pull
+git log
+git status
+
+Observe the difference
+
+
+
+
+========================================================================================
+========================================================================================
+
+
+GIT CLONE:
+================
+Our Project is walmat
+Let's create a private repo for walmat in github
+
+GRANT ACCESS:
+============
+
+Inside Walmat Repo
+settings  >>  manage access  >> invite team  >>  choose role (read and write)
+Once access is granted to you, you can even make changes in github and commit those changes
+But not recomended
+
+Back into my terminal
+======================================
+
+cd documents/ videos/ desktop/ etc [folder of your choice]
+
+git clone walmat url
+
+walmat repo project will be in your folder of choice above
+
+cd walmat
+
+git init -b main
+
+vim data.py   [write code or make code changes] and save
+
+git commit -a -m "data update" [it wont work because new file]
+
+git add *
+
+git commit -m "data update"
+
+git remote -v
+
+git remote add origin walmat url
+
+git remote -v
+
+git push origin main
+
+========================================================================================
+========================================================================================
+
+Pull Request- PR:
+  PR is use to review changes in one branch before merging in another branch. 
+  This is recommended for any merge in the master/release branch 
+    Legah 
+
+git reset   = Moves files from staging back to working area
+      echo 'Application is Ready for deployment' >> deploy.sh 
+
+git revert Cid = Delete the latest committed files 
+                 in the LocalRepo for a specific commit
+
+git show 3c0541aeb 
+
+git revert 3c0541aeb
