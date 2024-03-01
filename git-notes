@@ -1,6 +1,6 @@
 Git fetch, pull and clone
 =========================
-
+Notes:
 GIT COMMAND 
 
   git fetch --> It brings changes in the code to the LocalRepo
